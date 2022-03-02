@@ -1,15 +1,19 @@
-from app.model.collect_action import CollectAction
-from app.model.collect_task import CollectTask
-from app.model.download_task import DownloadTask
-from app.model.process_task import ProcessTask
-from app.model.search_term import SearchTerm
-from app.model.datasource import DataSource
-from app.model.platform import Platform
-from app.model.processor import Processor
-from app.model.media_download_status import MediaDownloadStatus
-from app.model.post import Post, Scores, Transcript, Labels
-from app.model.tag import Tag
-from app.model.monitor import Monitor
+from collect_action import CollectAction
+from collect_task import CollectTask
+from download_task import DownloadTask
+from process_task import ProcessTask
+from search_term import SearchTerm
+from datasource import DataSource
+from platform import Platform
+from processor import Processor
+from media_download_status import MediaDownloadStatus
+from post import Post, Scores, Transcript, Labels
+from tag import Tag
+from monitor import Monitor
+
+from annotation import TextForAnnotation, Annotation, Annotations
+from monitor import Monitor
+from monitor import Monitor
 
 
 model_classes = [
@@ -27,5 +31,10 @@ model_classes = [
     Processor,
     MediaDownloadStatus,
     Tag,
-    Monitor
+    Monitor,
+    TextForAnnotation, 
+    Annotation, 
+    Annotations
 ]
+
+
