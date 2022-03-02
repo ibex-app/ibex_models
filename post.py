@@ -58,4 +58,4 @@ class Post(Document):
         validate_assignment = True
 
     class Collection:
-        name = 'posts'
+        name = 'posts'  
