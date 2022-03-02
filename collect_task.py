@@ -1,8 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional, List
-from app.model.datasource import DataSource
-from app.model.platform import Platform
-from app.model.search_term import SearchTerm
+from ibex_models import DataSource, Platform, SearchTerm
 from datetime import datetime
 from uuid import UUID
 # from __future__ import annotations

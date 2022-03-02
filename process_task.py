@@ -1,5 +1,5 @@
 from pydantic import BaseModel
-from app.model.processor import Processor
+from ibex_models import Processor
 from uuid import UUID
 
 class ProcessTask(BaseModel):

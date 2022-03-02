@@ -1,6 +1,5 @@
 from pydantic import BaseModel
-from app.model.platform import Platform
-from app.model.post import Post
+from ibex_models.platform import Platform, Post
 from uuid import UUID
 from typing import Optional
 

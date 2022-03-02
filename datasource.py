@@ -1,7 +1,6 @@
 from typing import Optional, List
 from beanie import Document
-from app.model.platform import Platform
-# from __future__ import annotations
+from ibex_models import Platform
 from pydantic import Field
 from uuid import UUID, uuid4
 from datetime import datetime
