@@ -21,7 +21,11 @@ class CollectTask(Document):
     query: Optional[str]
     hits_count: Optional[int]
 
+    # Sample attribute indicates how much posts are collected for the specific query
+    # if the value is True, only the fraction of all avaliable posts are collected
     sample: bool = False
+    # if the get_hits_count attrcibute value is True, only hits count would be fetched, w/o posts 
+    get_hits_count: Optional[bool] 
 
     class Config:  
         use_enum_values = True
