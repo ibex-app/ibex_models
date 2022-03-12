@@ -5,7 +5,7 @@ from uuid import UUID
 from beanie import Document, Indexed
 from pydantic import BaseModel
 
-from ibex_models import Platform, MediaDownloadStatus
+from ibex_models import Platform, MediaStatus
 
 
 
@@ -47,7 +47,7 @@ class Post(Document):
     has_video: Optional[bool]
     api_dump: dict
     url:Optional[str]
-    media_download_status: Optional[MediaDownloadStatus]
+    media_download_status: Optional[MediaStatus]
     monitor_ids: List[UUID] = []
     image_url: Optional[str]
 
