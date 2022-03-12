@@ -1,7 +1,7 @@
 from pydantic import BaseModel
-from ibex_models import Processor
+from ibex_models import Processor, Post
 from uuid import UUID
 
 class ProcessTask(BaseModel):
-    post_id: UUID
+    post: Post
     processor: Processor
