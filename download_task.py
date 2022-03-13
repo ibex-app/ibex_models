@@ -6,4 +6,4 @@ from typing import Optional
 class DownloadTask(BaseModel):
     post: Post
     platform: Platform
-    meida_url: str
+    meida_url: Optional[str]

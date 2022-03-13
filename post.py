@@ -1,6 +1,7 @@
 from datetime import datetime
 from typing import Optional, List
-from uuid import UUID
+from pydantic import Field
+from uuid import UUID, uuid4
 
 from beanie import Document, Indexed
 from pydantic import BaseModel
@@ -34,7 +35,7 @@ class Transcript(BaseModel):
 
 
 class Post(Document):
-    # id: odm.fields.PydanticObjectId = Field(default_factory=uuid4, alias='_id')
+    # id: UUID = Field(default_factory=uuid4, alias='_id')
     title: str
     text: str
     created_at: datetime
