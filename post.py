@@ -47,7 +47,7 @@ class Post(Document):
     has_video: Optional[bool]
     api_dump: dict
     url:Optional[str]
-    media_download_status: Optional[MediaStatus]
+    media_status: Optional[MediaStatus]
     monitor_ids: List[UUID] = []
     image_url: Optional[str]
 
