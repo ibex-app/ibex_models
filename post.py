@@ -30,7 +30,7 @@ class Scores(BaseModel):
 
 
 class Transcript(BaseModel):
-    time: datetime
+    second: int
     text: str
 
 
