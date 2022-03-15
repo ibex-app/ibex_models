@@ -30,7 +30,7 @@ class Scores(BaseModel):
 
 
 class Transcript(BaseModel):
-    second: int
+    second: float
     text: str
 
 
