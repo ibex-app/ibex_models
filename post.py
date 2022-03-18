@@ -41,7 +41,7 @@ class Post(Document):
     created_at: datetime
     platform: Platform
     platform_id: str
-    data_source_id: Optional[UUID]
+    account_id: Optional[UUID]
     author_platform_id: Optional[str]
     hate_speech: Optional[float]
     sentiment: Optional[float]

@@ -6,7 +6,7 @@ from uuid import UUID, uuid4
 from datetime import datetime
 
 
-class DataSource(Document):  # This is the model
+class Account(Document):  # This is the model
     """
         These are pages/accounts that have already been identified as important. Data collection either proceeds via sources or keywords
         [indexed by name, platform]
@@ -40,4 +40,4 @@ class DataSource(Document):  # This is the model
     #     return name or 'foo'
 
     class Collection:
-        name = "data_sources"
+        name = "accounts"

@@ -1,6 +1,6 @@
 from ibex_models.platform import Platform
 from ibex_models.collect_action import CollectAction
-from ibex_models.datasource import DataSource
+from ibex_models.account import Account
 from ibex_models.search_term import SearchTerm
 from ibex_models.media_status import MediaStatus
 from ibex_models.post import Post, Scores, Transcript, Labels
@@ -18,7 +18,7 @@ from ibex_models.process_task import ProcessTask
 model_classes = [
     CollectAction,
     CollectTask,
-    DataSource,
+    Account,
     Platform,
     Post,
     Scores,

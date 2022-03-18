@@ -20,7 +20,7 @@ class CollectAction(Document):
     tags: List[str] = [] - the tags for collect actions
     parallel: bool if paralel is True, the tasks would be executed in paralel, otherwise in chain
     search_terms_tags: List[str] = [] tags to select search terms, if no search terms are passed, all the data from passed data soruces would be collected
-    data_source_tag: List[str] = [] tags to select data sources, if no data sources are passed, all the data from for passed search terms would be collected
+    account_tag: List[str] = [] tags to select data sources, if no data sources are passed, all the data from for passed search terms would be collected
     last_collection_date: Optional[datetime]
 
     """
@@ -33,7 +33,7 @@ class CollectAction(Document):
     platform: Platform
     tags: List[str] = []
     search_term_tags: List[str]
-    data_source_tags: List[str]
+    account_tags: List[str]
     last_collection_date: Optional[datetime]
     
     class Config:  

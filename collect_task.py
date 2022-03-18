@@ -1,6 +1,6 @@
 from pydantic import BaseModel
 from typing import Optional, List
-from ibex_models import DataSource, Platform, SearchTerm
+from ibex_models import Account, Platform, SearchTerm
 from datetime import datetime
 from uuid import UUID
 from pydantic import Field
@@ -15,7 +15,7 @@ class CollectTask(Document):
     date_from: datetime
     date_to: datetime
     platform: Optional[Platform]
-    data_sources: Optional[List[DataSource]]
+    accounts: Optional[List[Account]]
     search_terms: Optional[List[SearchTerm]]
     monitor_id: UUID
     query: Optional[str]
