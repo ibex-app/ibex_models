@@ -7,7 +7,7 @@ from ibex_models.post import Post, Scores, Transcript, Labels
 from ibex_models.tag import Tag
 from ibex_models.annotation import TextForAnnotation, Annotation, Annotations
 from ibex_models.monitor import Monitor
-from ibex_models.collect_task import CollectTask
+from ibex_models.collect_task import CollectTask, CollectTaskStatus
 from ibex_models.download_task import DownloadTask
 from ibex_models.processor import Processor
 from ibex_models.process_task import ProcessTask
@@ -31,7 +31,8 @@ model_classes = [
     MediaStatus,
     Tag,
     Monitor,
-    TextForAnnotation, 
-    Annotation, 
-    Annotations
+    TextForAnnotation,
+    Annotation,
+    Annotations,
+    CollectTaskStatus
 ]
