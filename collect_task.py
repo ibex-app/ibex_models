@@ -8,6 +8,13 @@ from uuid import UUID, uuid4
 from beanie import Document
 # from __future__ import annotations
 
+from enum import Enum
+
+class CollectTaskStatus(str, Enum):
+    initialized = "initialized"
+    is_running = "is-running"
+    finalized = "finalized"
+
 
 class CollectTask(Document):
     # executor: str
@@ -17,9 +24,10 @@ class CollectTask(Document):
     platform: Optional[Platform]
     accounts: Optional[List[Account]]
     search_terms: Optional[List[SearchTerm]]
-    monitor_id: UUID
+    monitor_id: Optional[UUID]
     query: Optional[str]
     hits_count: Optional[int]
+    status: Optional[CollectTaskStatus] = CollectTaskStatus.initialized
 
     # Sample attribute indicates how much posts are collected for the specific query
     # if the value is True, only the fraction of all avaliable posts are collected
