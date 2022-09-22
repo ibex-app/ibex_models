@@ -11,6 +11,7 @@ from ibex_models.collect_task import CollectTask, CollectTaskStatus
 from ibex_models.download_task import DownloadTask
 from ibex_models.processor import Processor
 from ibex_models.process_task import ProcessTask
+from ibex_models.process_task_batch import ProcessTaskBatch
 
 
 
@@ -27,6 +28,7 @@ model_classes = [
     SearchTerm,
     DownloadTask,
     ProcessTask,
+    ProcessTaskBatch,
     Processor,
     MediaStatus,
     Tag,

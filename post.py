@@ -2,7 +2,6 @@ from datetime import datetime
 from typing import Optional, List
 from pydantic import Field
 from uuid import UUID, uuid4
-
 from beanie import Document, Indexed
 from pydantic import BaseModel
 
@@ -56,6 +55,18 @@ class Post(Document):
     labels: Optional[Labels]
     scores: Optional[Scores]
     transcripts: Optional[List[Transcript]]
+    hatespeech_terms: Optional[List[str]]
+    
+    def getEngagement(self):
+        score = 0
+        for k,v in vars(self.scores).items():
+            if not v is None:
+                score += v
+        return score#np.sum(vars(self.scores).values())
+    
+    def to_dict(self):
+        return vars(self)
+
 
     class Config:
         use_enum_values = True

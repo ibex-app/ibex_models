@@ -10,4 +10,6 @@ class Processor(str, Enum):
     hate_speech = 'hate_speech'
     topic = 'topic'
     botscore = 'botscore'
+    detect_search_terms = 'detect_search_terms'
+    top_engagement = 'top_engagement'
 
