@@ -14,6 +14,7 @@ class CollectTaskStatus(str, Enum):
     initialized = "initialized"
     is_running = "is-running"
     finalized = "finalized"
+    failed = "failed"
 
 
 class CollectTask(Document):
