@@ -20,7 +20,7 @@ class MonitorStatus(int, Enum):
 class Monitor(Document):
     id: UUID = Field(default_factory=uuid4, alias='_id')
     title: str
-    descr: str
+    descr: Optional[str]
     collect_actions: List[UUID]
     date_from: datetime
     date_to: Optional[datetime]
