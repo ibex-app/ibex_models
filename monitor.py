@@ -7,6 +7,8 @@ from datetime import datetime
 
 from enum import Enum
 
+from ibex_models.platform import Platform
+
 class MonitorStatus(int, Enum):
     initialized = 0
     sampling = 1
@@ -20,11 +22,12 @@ class MonitorStatus(int, Enum):
 class Monitor(Document):
     id: UUID = Field(default_factory=uuid4, alias='_id')
     title: str
-    descr: Optional[str]
+    descr: str
     collect_actions: List[UUID]
     date_from: datetime
     date_to: Optional[datetime]
-    status: MonitorStatus = MonitorStatus.initialized
+    status: Optional[MonitorStatus] = MonitorStatus.initialized
+    platforms: List[Platform]
 
     class Collection:
         name = "monitors"
