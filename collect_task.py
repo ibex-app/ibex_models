@@ -25,6 +25,8 @@ class CollectTask(Document):
     platform: Optional[Platform]
     accounts: Optional[List[Account]]
     search_terms: Optional[List[SearchTerm]]
+    search_term_ids: Optional[List[UUID]]
+    account_ids: Optional[List[UUID]]
     monitor_id: Optional[UUID]
     query: Optional[str]
     hits_count: Optional[int]
