@@ -13,10 +13,10 @@ class MonitorStatus(int, Enum):
     initialized = 0
     sampling = 1
     sampled = 2
-    live = 3
-    collecting = 4
-    collected = 5
-    finalized = 6
+    collecting = 3
+    live = 4
+    finalized = 5
+    
 
 
 class Monitor(Document):
