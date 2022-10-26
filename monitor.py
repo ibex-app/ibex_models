@@ -15,7 +15,8 @@ class MonitorStatus(int, Enum):
     sampled = 2
     collecting = 3
     live = 4
-    finalized = 5
+    updating = 5
+    finalized = 6
     
 
 
