@@ -41,7 +41,7 @@ class Post(Document):
     platform: Platform
     platform_id: str
     account_id: Optional[UUID]
-    search_terms_ids: Optional[List[UUID]]
+    search_term_ids: Optional[List[UUID]]
     author_platform_id: Optional[str]
     hate_speech: Optional[float]
     sentiment: Optional[float]
