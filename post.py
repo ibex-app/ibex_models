@@ -69,6 +69,9 @@ class Post(Document):
     def to_dict(self):
         return vars(self)
 
+    def set_total_engagement(self):
+        if self.scores:
+            self.scores.total = sum([_ for _ in self.scores.__dict__.values() if _ is not None])
 
     class Config:
         use_enum_values = True
