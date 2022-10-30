@@ -27,6 +27,8 @@ class Scores(BaseModel):
     love: Optional[int]
     angry: Optional[int]
 
+    total: Optional[int]
+
 
 class Transcript(BaseModel):
     second: float
