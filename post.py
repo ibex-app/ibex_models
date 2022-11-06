@@ -26,7 +26,8 @@ class Scores(BaseModel):
     wow: Optional[int]
     love: Optional[int]
     angry: Optional[int]
-
+    comments: Optional[int]
+    
     total: Optional[int]
 
 
