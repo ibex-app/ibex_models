@@ -19,6 +19,7 @@ class Labels(BaseModel):
 
 class Scores(BaseModel):
     likes: Optional[int]
+    dislikes: Optional[int]
     views: Optional[int]
     engagement: Optional[int]
     shares: Optional[int]
