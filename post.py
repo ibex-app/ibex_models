@@ -71,7 +71,14 @@ class Post(Document):
     
     def to_dict(self):
         return vars(self)
+    
+    def full_string(self):
+        text = f'{self.api_dump}'
+        if self.transcripts and len(self.transcripts):
+            text += ' '.join([transcript.text for transcript in self.transcripts])
+        return text
 
+    
     class Config:
         use_enum_values = True
         validate_assignment = True
