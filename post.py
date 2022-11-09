@@ -8,15 +8,6 @@ from pydantic import BaseModel
 from ibex_models import Platform, MediaStatus
 
 
-
-class Labels(BaseModel):
-    topics: Optional[List[str]]
-    persons: Optional[List[UUID]]
-    organizations: Optional[List[str]]
-    locations: Optional[List[UUID]]
-    
-
-
 class Scores(BaseModel):
     likes: Optional[int]
     dislikes: Optional[int]
@@ -57,10 +48,10 @@ class Post(Document):
     monitor_ids: List[UUID] = []
     image_url: Optional[str]
 
-    labels: Optional[Labels]
+    tag_ids: Optional[UUID]
     scores: Optional[Scores]
     transcripts: Optional[List[Transcript]]
-    hatespeech_terms: Optional[List[str]]
+    
     
     def getEngagement(self):
         score = 0
