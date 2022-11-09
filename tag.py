@@ -21,6 +21,7 @@ class TagType(str, Enum):
     positive = 'positive'
     territorial_conflict = 'territorial conflict'
     historical_issue = 'historical issue'
+    confrontational = 'confrontational'
 
 class Tag(Document):
     id: UUID = Field(default_factory=uuid4, alias='_id')
