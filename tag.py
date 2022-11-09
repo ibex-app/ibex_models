@@ -12,6 +12,15 @@ class TagType(str, Enum):
     organization = 'organization'
     object = 'object'
     location = 'location'
+    hate_speech = 'hate speech'
+    conciliatory = 'conciliatory'
+    neutral = 'neutral'
+    aggressive = 'aggressive'
+    negative = 'negative'
+    incitement = 'incitement'
+    positive = 'positive'
+    territorial_conflict = 'territorial conflict'
+    historical_issue = 'historical issue'
 
 class Tag(Document):
     id: UUID = Field(default_factory=uuid4, alias='_id')
