@@ -8,6 +8,12 @@ from pydantic import BaseModel
 from ibex_models import Platform, MediaStatus
 
 
+class Labels(BaseModel):
+    topics: Optional[List[str]]
+    persons: Optional[List[UUID]]
+    organizations: Optional[List[str]]
+    locations: Optional[List[UUID]]
+        
 class Scores(BaseModel):
     likes: Optional[int]
     dislikes: Optional[int]
