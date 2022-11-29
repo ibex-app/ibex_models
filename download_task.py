@@ -4,6 +4,6 @@ from uuid import UUID
 from typing import Optional, List
 
 class DownloadTask(BaseModel):
-    post_ids: List[UUD]
+    post_ids: List[UUID]
     platform: Platform
     meida_url: Optional[str]
