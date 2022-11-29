@@ -1,9 +1,9 @@
 from pydantic import BaseModel
 from ibex_models import Platform, Post
 from uuid import UUID
-from typing import Optional
+from typing import Optional, List
 
 class DownloadTask(BaseModel):
-    post: Post
+    post_ids: List[UUD]
     platform: Platform
     meida_url: Optional[str]

@@ -31,6 +31,7 @@ class CollectTask(Document):
     query: Optional[str]
     hits_count: Optional[int]
     status: Optional[CollectTaskStatus] = CollectTaskStatus.initialized
+    env: str
 
     # Sample attribute indicates how much posts are collected for the specific query
     # if the value is True, only the fraction of all avaliable posts are collected
