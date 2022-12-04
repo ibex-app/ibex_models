@@ -5,7 +5,7 @@ from uuid import UUID, uuid4
 from beanie import Document, Indexed
 from pydantic import BaseModel
 
-from ibex_models import Platform, MediaStatus
+from ibex_models import Platform, MediaStatus, Processor
 
 
 class Labels(BaseModel):
@@ -54,7 +54,7 @@ class Post(Document):
     monitor_ids: List[UUID] = []
     image_url: Optional[str]
     language: Optional[str]
-    process_applied: List[str] = []
+    process_applied: Optional[List[Processor]]
     
     tag_ids: Optional[UUID]
     scores: Optional[Scores]
