@@ -7,3 +7,4 @@ class ProcessTaskBatch(BaseModel):
     # posts: List[Post]
     processor: Processor
     monitor_id: UUID
+    env: str
