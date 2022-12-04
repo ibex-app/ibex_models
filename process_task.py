@@ -6,3 +6,4 @@ class ProcessTask(BaseModel):
     post: Post
     processor: Processor
     monitor_id: UUID
+    env: str
