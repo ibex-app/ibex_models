@@ -12,4 +12,5 @@ class Processor(str, Enum):
     botscore = 'botscore'
     detect_search_terms = 'detect_search_terms'
     top_engagement = 'top_engagement'
+    detect_language = 'detect_language'
 
