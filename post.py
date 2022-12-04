@@ -53,7 +53,9 @@ class Post(Document):
     media_status: Optional[MediaStatus]
     monitor_ids: List[UUID] = []
     image_url: Optional[str]
-
+    language: Optional[str]
+    process_applied: List[str] = []
+    
     tag_ids: Optional[UUID]
     scores: Optional[Scores]
     transcripts: Optional[List[Transcript]]
