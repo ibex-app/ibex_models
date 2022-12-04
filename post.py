@@ -5,8 +5,8 @@ from uuid import UUID, uuid4
 from beanie import Document, Indexed
 from pydantic import BaseModel
 
-from ibex_models import Platform, MediaStatus, Processor
-
+from ibex_models import Platform, MediaStatus
+from ibex_models.processor import Processor
 
 class Labels(BaseModel):
     topics: Optional[List[str]]
