@@ -27,6 +27,7 @@ class Annotations(Document):
     id: UUID = Field(default_factory=uuid4, alias='_id')
     text_id: UUID
     user_mail: str
+    created_at: Optional[datetime] = datetime.now()
     annotations: Optional[List[Annotation]]
 
     class Collection:
