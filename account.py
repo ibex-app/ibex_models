@@ -1,4 +1,4 @@
-from typing import Optional, List
+from typing import Optional, List, Any
 from beanie import Document
 from ibex_models import Platform
 from pydantic import Field
@@ -30,7 +30,7 @@ class Account(Document):  # This is the model
     tags: List[str] = []
     broadcasting_start_time: Optional[datetime]
     broadcasting_end_time: Optional[datetime]
-    api_dump: Optional[any]
+    api_dump: Optional[Any]
     
     class Config:  
         use_enum_values = True
