@@ -30,7 +30,8 @@ class Account(Document):  # This is the model
     tags: List[str] = []
     broadcasting_start_time: Optional[datetime]
     broadcasting_end_time: Optional[datetime]
-
+    api_dump: Optional[any]
+    
     class Config:  
         use_enum_values = True
         validate_assignment = True
